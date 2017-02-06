@@ -10,7 +10,7 @@ var select_ = '';
 for (var e = 0; e < div_cont_select.length; e++) {
 div_cont_select[e].setAttribute('data-indx-select',e);
 div_cont_select[e].setAttribute('data-selec-open','false');
-var ul_cont = document.querySelectorAll("[data-indx-select='"+e+"'] > .cont_select_int");
+var ul_cont = document.querySelectorAll("[data-indx-select='"+e+"'] > .cont_list_select_mate > ul");
  select_ = document.querySelectorAll("[data-indx-select='"+e+"'] >select")[0];
 var select_optiones = select_.options;
 document.querySelectorAll("[data-indx-select='"+e+"']  > .selecionado_opcion ")[0].setAttribute('data-n-select',e);
@@ -35,44 +35,35 @@ ul_cont[0].appendChild(li[i]);
 var cont_slc = 0;
 function open_select(idx){
 var idx1 =  idx.getAttribute('data-n-select');
-  var ul_cont_li = document.querySelectorAll("[data-indx-select='"+idx1+"'] > .cont_select_int > li");
+  var ul_cont_li = document.querySelectorAll("[data-indx-select='"+idx1+"'] .cont_select_int > li");
 var hg = 0;
-var t_select = document.querySelectorAll("[data-n-select='"+idx1+"']")[0].offsetHeight;
-var elmMargin = parseInt(document.defaultView.getComputedStyle(document.querySelectorAll("[data-n-select='"+idx1+"']")[0], '').getPropertyValue('margin-top')) + parseInt(document.defaultView.getComputedStyle(document.querySelectorAll("[data-n-select='"+idx1+"']")[0], '').getPropertyValue('margin-bottom'));
 var slect_open = document.querySelectorAll("[data-indx-select='"+idx1+"']")[0].getAttribute('data-selec-open');
 
-  hg = hg+t_select+elmMargin;
   for (var i = 0; i < ul_cont_li.length; i++) {
 hg += ul_cont_li[i].offsetHeight;
 }; 
  if (slect_open == 'false') {  
  document.querySelectorAll("[data-indx-select='"+idx1+"']")[0].setAttribute('data-selec-open','true');
- document.querySelectorAll("[data-indx-select='"+idx1+"']")[0].style.height = hg+"px";
+ document.querySelectorAll("[data-indx-select='"+idx1+"'] > .cont_list_select_mate > ul")[0].style.height = hg+"px";
  document.querySelectorAll("[data-indx-select='"+idx1+"'] > .icon_select_mate")[0].style.transform = 'rotate(180deg)';
 }else{
  document.querySelectorAll("[data-indx-select='"+idx1+"']")[0].setAttribute('data-selec-open','false');
- var hg2 = t_select+elmMargin; 
  document.querySelectorAll("[data-indx-select='"+idx1+"'] > .icon_select_mate")[0].style.transform = 'rotate(0deg)';
- document.querySelectorAll("[data-indx-select='"+idx1+"']")[0].style.height = hg2+"px";
+ document.querySelectorAll("[data-indx-select='"+idx1+"'] > .cont_list_select_mate > ul")[0].style.height = "0px";
  }
 
 } // fin function open_select
 
 function salir_select(indx){
 var select_ = document.querySelectorAll("[data-indx-select='"+indx+"'] > select")[0];
-var hg = 0;
-var t_select = document.querySelectorAll("[data-n-select='"+indx+"']")[0].offsetHeight;
-var elmMargin = parseInt(document.defaultView.getComputedStyle(document.querySelectorAll("[data-n-select='"+indx+"']")[0], '').getPropertyValue('margin-top')) + parseInt(document.defaultView.getComputedStyle(document.querySelectorAll("[data-n-select='"+indx+"']")[0], '').getPropertyValue('margin-bottom'));
-  hg = t_select+elmMargin; 
-  document.querySelectorAll("[data-indx-select='"+indx+"']")[0].style.height = hg+"px";
+ document.querySelectorAll("[data-indx-select='"+indx+"'] > .cont_list_select_mate > ul")[0].style.height = "0px";
 document.querySelector("[data-indx-select='"+indx+"'] > .icon_select_mate").style.transform = 'rotate(0deg)';
  document.querySelectorAll("[data-indx-select='"+indx+"']")[0].setAttribute('data-selec-open','false');
- 
 }
 
 
 function _select_option(indx,selc){
-  var li_s = document.querySelectorAll("[data-indx-select='"+selc+"'] >.cont_select_int > li");
+  var li_s = document.querySelectorAll("[data-indx-select='"+selc+"'] .cont_select_int > li");
   var p_act = document.querySelectorAll("[data-indx-select='"+selc+"'] > .selecionado_opcion")[0].innerHTML = li_s[indx].innerHTML;
 var select_optiones = document.querySelectorAll("[data-indx-select='"+selc+"'] > select > option");
 for (var i = 0; i < li_s.length; i++) {

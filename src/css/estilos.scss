@@ -2,7 +2,6 @@
 * {
   margin: 0px auto;
   padding: 0px;
-  text-align: center;
 }
 
 .cont_select_center {
@@ -21,6 +20,13 @@ height: 100%;
   }
 
 }
+
+.cont_max {
+  position: relative;
+  max-width: 1170px;
+  width: 98%;
+}
+
 /* ///  DECORATION CSS  ///  */
 
 
@@ -34,5 +40,16 @@ color: #444;
   width: 33%;
 float: left;
 }
+
+.cont_documentos {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+}
+.cont_documentos code {
+text-align: left;
+}
+
 
 

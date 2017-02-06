@@ -1,8 +1,7 @@
 /* ///  DECORATION CSS ///  */
 * {
   margin: 0px auto;
-  padding: 0px;
-  text-align: center; }
+  padding: 0px; }
 
 .cont_select_center {
   position: absolute;
@@ -17,6 +16,11 @@
     width: 100%;
     background-color: #fd7b52; }
 
+.cont_max {
+  position: relative;
+  max-width: 1170px;
+  width: 98%; }
+
 /* ///  DECORATION CSS  ///  */
 h1 {
   font-family: 'Roboto';
@@ -26,5 +30,14 @@ h1 {
   position: relative;
   width: 33%;
   float: left; }
+
+.cont_documentos {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 20px; }
+
+.cont_documentos code {
+  text-align: left; }
 
 /*# sourceMappingURL=estilos.css.map */
