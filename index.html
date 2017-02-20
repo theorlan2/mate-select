@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Dany Santos - MATE SELECT</title>
 <link rel="stylesheet" href="src/css/estilos.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400" rel="stylesheet">
 <link rel="stylesheet" href="src/theme.css">
 <link rel="stylesheet" href="dist/css/select-mate.css">
 <script type="text/javascript" src="dist/js/mate-select.min.js"></script>
@@ -48,7 +49,7 @@
 <select name="" onclick="return false;" id="">
 <option value=""  >Seleciona una Opcion </option>
 <option value="1">Select option 1</option>
-<option value="2">Select option 2</option>
+<option value="2" selected >Option Selected true</option>
 <option value="3">Select option 3</option>
   </select>
 <p class="selecionado_opcion"  onclick="open_select(this)" ></p><span onclick="open_select()" class="icon_select_mate" ><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -107,27 +108,33 @@
 </div>
 
 
-<div class="cont_documentos">
- 
-<pre><code data-language="html">
-  &#x3C;!-- Custom select structure --&#x3E; 
-&#x3C;div class=&#x22;select_mate&#x22; data-mate-select=&#x22;active&#x22; &#x3E;
-&#x3C;select name=&#x22;&#x22; onclick=&#x22;&#x22; id=&#x22;&#x22;&#x3E;
-&#x3C;option value=&#x22;&#x22;  &#x3E;Seleciona una Opcion &#x3C;/option&#x3E;
-&#x3C;option value=&#x22;&#x22;&#x3E; option &#x3C;/option&#x3E;
-  &#x3C;/select&#x3E;
-&#x3C;p class=&#x22;selecionado_opcion&#x22;  onclick=&#x22;open_select(this)&#x22; &#x3E;&#x3C;/p&#x3E;
-&#x3C;span onclick=&#x22;open_select()&#x22; class=&#x22;icon_select_mate&#x22; &#x3E;
-&#x3C;svg fill=&#x22;#000000&#x22; height=&#x22;24&#x22; viewBox=&#x22;0 0 24 24&#x22; width=&#x22;24&#x22; xmlns=&#x22;http://www.w3.org/2000/svg&#x22;&#x3E;
- &#x3C;path d=&#x22;M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z&#x22;/&#x3E;
-  &#x3C;path d=&#x22;M0-.75h24v24H0z&#x22; fill=&#x22;none&#x22;/&#x3E;
-&#x3C;/svg&#x3E;&#x3C;/span&#x3E;
-&#x3C;div class=&#x22;cont_list_select_mate&#x22;&#x3E;
-  &#x3C;ul class=&#x22;cont_select_int&#x22;&#x3E;  &#x3C;/ul&#x3E; 
-&#x3C;/div&#x3E;
-  &#x3C;/div&#x3E;
-  &#x3C;!-- Custom select structure --&#x3E; 
 
+
+<div class="cont_documentos">
+
+<p>Y cada ves que desees utilizarlo debes utilizar esta estructura en el select, para que funcione correctamente</p>
+<br> 
+<pre><code data-language="html">
+&lt;!-- select structura --&gt; 
+&lt;div class=&quot;select_mate&quot;
+ data-mate-select=&quot;active&quot; &gt; &lt;select name=&quot;&quot; id=&quot;&quot;&gt;
+&lt;!-- Introduce las opciones aqui --&gt; 
+  &lt;option value=&quot;&quot; &gt;Seleciona una Opcion &lt;/option&gt;
+&lt;!-- Puedes utilizar la opcion selected --&gt; 
+    &lt;option value=&quot;1&quot; selected &gt;Select option 1&lt;/option&gt;
+  &lt;/select&gt; 
+ &lt;p class=&quot;selecionado_opcion&quot; onclick=&quot;open_select(this)&quot; &gt;&lt;/p&gt;
+  &lt;span onclick=&quot;open_select(this)&quot; class=&quot;icon_select_mate&quot;
+   &gt;&lt;svg fill=&quot;#000000&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;24&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt; 
+   &lt;path d=&quot;M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z&quot;/&gt; 
+   &lt;path d=&quot;M0-.75h24v24H0z&quot; fill=&quot;none&quot;/&gt; 
+   &lt;/svg&gt;
+   &lt;/span&gt; 
+   &lt;div class=&quot;cont_list_select_mate&quot;&gt; 
+   &lt;ul class=&quot;cont_select_int&quot;&gt; 
+   &lt;/ul&gt;
+    &lt;/div&gt; &lt;/div&gt;
+    &lt;!-- Custom select structure --&gt;
 
 </code></pre>
  

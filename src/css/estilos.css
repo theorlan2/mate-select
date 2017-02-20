@@ -1,7 +1,11 @@
 /* ///  DECORATION CSS ///  */
 * {
   margin: 0px auto;
-  padding: 0px; }
+  padding: 0px; 
+  font-family: 'Roboto Condensed', sans-serif;
+
+}
+
 
 .cont_select_center {
   position: absolute;
@@ -23,8 +27,12 @@
 
 /* ///  DECORATION CSS  ///  */
 h1 {
-  font-family: 'Roboto';
+font-family: 'Roboto Condensed', sans-serif;
   color: #444; }
+p {
+  font-family: 'Roboto Condensed', sans-serif;
+
+}
 
 .col_md_3 {
   position: relative;
@@ -40,4 +48,11 @@ h1 {
 .cont_documentos code {
   text-align: left; }
 
-/*# sourceMappingURL=estilos.css.map */
+@media screen and (max-width: 640px) {
+  .col_md_3 {
+width: 98%;
+margin: 0.5%;
+  }
+
+}
+
